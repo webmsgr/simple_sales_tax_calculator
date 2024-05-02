@@ -133,7 +133,7 @@ function is_number(val: string): boolean {
         return false;
    }
    // parseFloat ignores trailing chars (why?????? javascript???)
-    return val.match(/^\d+.?\d*$/) != null;
+    return val.match(/^\d+\.?\d*$/) != null;
 
 }
 
