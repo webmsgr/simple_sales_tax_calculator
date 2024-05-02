@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Sales Tax Calculator</title>
+    <link rel="stylesheet" href="src/style.css">
+    <script src="src/index.ts" async></script>
+</head>
+<body>
+    <form id="mainform">
+        <h1>Simple Sales Tax Calculator</h1>
+        <div class="form-inline">
+            <label for="name">Product Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="form-inline">
+            <label for="quantity">Quantity:</label>
+            <input type="text" id="quantity" name="quantity">
+        </div>
+        <div class="form-inline">
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price">
+        </div>
+        <div class="form-inline">
+            <label for="tax">Tax Rate:</label>
+            <input type="text" id="tax" name="tax">
+        </div>
+        <button type="submit">Calculate</button>
+        <p id="result"></p>
+    </form>
+   
+</body>
+</html>

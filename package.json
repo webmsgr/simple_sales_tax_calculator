@@ -1,0 +1,14 @@
+{
+  "name": "simple_sales_tax_calculator",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "wackery",
+  "dependencies": {
+    "vite": "^5.2.10"
+  }
+}
