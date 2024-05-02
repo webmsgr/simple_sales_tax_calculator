@@ -144,6 +144,9 @@ function main() {
     let price: DecimalFormItem = new DecimalFormItem(document.querySelector('#price') as HTMLInputElement, document.querySelector('#priceError')!);
     let tax: DecimalFormItem = new DecimalFormItem(document.querySelector('#tax') as HTMLInputElement, document.querySelector('#taxError')!);
     let result_box: HTMLElement = document.querySelector('#result')!;
+    let currency_format = new Intl.NumberFormat(navigator.language, { style: 'currency', currency: 'USD' })
+    let percent_format = new Intl.NumberFormat(navigator.language, { style: 'percent' })
+    let number_format = new Intl.NumberFormat(navigator.language, { style: 'decimal' })
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         name.validate();
@@ -156,7 +159,7 @@ function main() {
         }
         let subtotal: number = quantity.value * price.value;
         let total: number = subtotal + (subtotal * (tax.value/100.0))
-        let result_str: string = `'${name.value}' x ${quantity.value} @ $${price.value.toFixed(2)} = $${subtotal.toFixed(2)} + ${tax.value}% tax = ${total.toFixed(2)}`;
+        let result_str: string = `'${name.value}' x ${number_format.format(quantity.value)} @ ${currency_format.format(price.value)} = ${currency_format.format(subtotal)} + ${percent_format.format(tax.value/100.0)} tax = ${currency_format.format(total)}`;
         result_box.textContent = result_str;
     });
 }
