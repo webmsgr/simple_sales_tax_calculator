@@ -156,7 +156,7 @@ function main() {
         }
         let subtotal: number = quantity.value * price.value;
         let total: number = subtotal + (subtotal * (tax.value/100.0))
-        let result_str: string = `'${name.value}' x ${quantity.value} @ $${price.value.toFixed(2)} = ${subtotal.toFixed(2)} + ${tax.value}% tax = ${total.toFixed(2)}`;
+        let result_str: string = `'${name.value}' x ${quantity.value} @ $${price.value.toFixed(2)} = $${subtotal.toFixed(2)} + ${tax.value}% tax = ${total.toFixed(2)}`;
         result_box.textContent = result_str;
     });
 }
