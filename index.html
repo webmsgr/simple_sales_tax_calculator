@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Sales Tax Calculator</title>
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/style.scss">
     <script src="src/index.ts" async></script>
 </head>
 <body>
@@ -13,23 +13,23 @@
         <div class="form-inline">
             <label for="name">Product Name:</label>
             <input type="text" id="name">
-            <span class="error" id="nameError"></span>
         </div>
+        <span class="error" id="nameError"></span>
         <div class="form-inline">
             <label for="quantity">Quantity:</label>
             <input type="text" id="quantity">
-            <span class="error" id="quantityError"></span>
         </div>
+        <span class="error" id="quantityError"></span>
         <div class="form-inline">
             <label for="price">Price:</label>
             <input type="text" id="price">
-            <span class="error" id="priceError"></span>
         </div>
+        <span class="error" id="priceError"></span>
         <div class="form-inline">
             <label for="tax">Tax Rate (%):</label>
             <input type="text" id="tax">
-            <span class="error" id="taxError"></span>
         </div>
+        <span class="error" id="taxError"></span>
         <button type="submit">Calculate</button>
         <p id="result"></p>
     </form>
