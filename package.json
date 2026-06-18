@@ -10,6 +10,6 @@
   "author": "wackery",
   "devDependencies": {
     "sass": "^1.76.0",
-    "vite": "^5.2.10"
+    "vite": "^6.4.3"
   }
 }
